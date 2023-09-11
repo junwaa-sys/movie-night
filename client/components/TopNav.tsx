@@ -8,8 +8,9 @@ function TopNav() {
     <div className="topnav">
       <div className="topnav-container">
         <a href="#Home">HOME</a>
-
-        <button className ="button" onClick={() => loginWithRedirect()}>LOGIN</button>
+        <button className="button" onClick={() => loginWithRedirect()}>
+          LOGIN
+        </button>
       </div>
     </div>
   )
