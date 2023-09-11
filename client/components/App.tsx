@@ -6,9 +6,6 @@ function App() {
   return (
     <>
       <TopNav />
-      <div className="app">
-        <h1>TEST</h1>
-      </div>
     </>
   )
 }
