@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <Auth0Provider
       domain="dev-q2tnfzhtn06lumms.us.auth0.com"
       clientId="pXmDietKnRZOA5Kk6C9vwqtXhRpUiQko"
-      redirectUri={`${window.location.origin}/dashboard`}
+      redirectUri={`${window.location.origin}`}
       audience="https://dev-q2tnfzhtn06lumms.us.auth0.com/api/v2/"
     >
       <Router>
