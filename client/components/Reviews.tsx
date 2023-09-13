@@ -6,3 +6,5 @@ function Reviews(movieId: string) {
     </div>
   )
 }
+
+export default Reviews
