@@ -46,6 +46,9 @@ function Main() {
             </div>
           </div>
         </div>
+        <Reviews
+          movieId={randomMovie?.results[0].id ? randomMovie?.results[0].id : ''}
+        />
       </>
     )
   }
