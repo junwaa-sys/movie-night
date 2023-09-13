@@ -1,5 +1,4 @@
-import express, { response } from 'express'
-import * as models from '../../client/models/movies'
+import express from 'express'
 import 'dotenv/config'
 import request from 'superagent'
 
