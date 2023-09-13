@@ -91,3 +91,15 @@ export interface ReleaseDate {
   year: number
   __typename: string
 }
+
+export interface MovieDetails {
+  id: string
+  title: string
+  director: string
+  language: string
+  genre: string
+  plot: string
+  poster_url: string
+  actors: string
+  released_date: string
+}
