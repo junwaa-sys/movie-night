@@ -1,7 +1,6 @@
 import express from 'express'
 import { join } from 'node:path'
 
-import fruitRoutes from './routes/fruits'
 import movieRoutes from './routes/movie'
 
 const server = express()
