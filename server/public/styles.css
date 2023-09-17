@@ -1,11 +1,11 @@
 .topnav {
-  overflow:  hidden;
-  background-color:dimgray;
+  overflow:  hidden;  
   position: fixed;
   display: flex;
   justify-content: center;   
   width: 100vw;
-  height: 3vh;  
+  height: 3vh;
+  background-color: darkgrey;
 }
 
 .topnav .topnav-container {       
@@ -16,21 +16,18 @@
 }
 
 .topnav a {
-  float: left;
-  color: white;  
+  float: left;  
   font-size: 20px;  
   padding-left: 10px;
   padding-right: 10px;  
 }
 
-.topnav a:hover {
+.topnav a :hover {
   background-color: beige;
-  color:black
 }
 
 .topnav a .active {
-  background-color: aquamarine;
-  color: white;
+  background-color:darkgrey ;
 }
 
 .main {

@@ -40,7 +40,12 @@
   },
   "dependencies": {
     "@auth0/auth0-react": "^1.12.0",
+    "@emotion/react": "^11.11.1",
+    "@mantine/core": "^6.0.21",
+    "@mantine/ds": "^6.0.21",
+    "@mantine/hooks": "^6.0.21",
     "@redux-devtools/extension": "^3.2.3",
+    "@tabler/icons-react": "^2.34.0",
     "@types/superagent": "^4.1.18",
     "auth0": "^3.7.0",
     "axios": "^1.5.0",
