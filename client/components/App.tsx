@@ -1,6 +1,6 @@
 import TopNav from './TopNav'
 import Main from './Main'
-import MoiveList from './MoiveList'
+import MoiveList from './MovieList'
 import { Routes, Route } from 'react-router-dom'
 
 function App() {

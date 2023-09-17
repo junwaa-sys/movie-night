@@ -1,6 +1,7 @@
 import express from 'express'
 import 'dotenv/config'
 import request from 'superagent'
+import * as db from '../db/movies'
 
 const router = express.Router()
 const axios = require('axios')
@@ -38,5 +39,34 @@ router.get('/get-details/:id', (req, res) => {
     .catch((error) => {
       console.log(error)
     })
+})
+
+router.get('/get/movie/:id', async (req, res) => {
+  const movieId = req.params.id
+  try {
+    const movie = await db.getMovieById(movieId)
+    res.json(movie)
+  } catch (error) {
+    console.log(error)
+  }
+})
+
+router.get('/get-movie-list', async (req, res) => {
+  try {
+    const movieList = await db.getMovie()
+    res.json(movieList)
+  } catch (error) {
+    console.log(error)
+  }
+})
+
+router.post('/add', async (req, res) => {
+  const details = req.body
+  try {
+    const addedMovie = await db.addMovie(details)
+    res.json(addedMovie)
+  } catch (error) {
+    console.log(error)
+  }
 })
 export default router

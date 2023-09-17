@@ -5,3 +5,5 @@ export interface Reviews {
   body: string
   created_at: string
 }
+
+export type NewReview = Partial<Reviews>
