@@ -30,24 +30,14 @@ module.exports = {
   },
 
   production: {
-    client: 'sqlite3',
-    useNullAsDefault: true,
-    connection: {
-      filename: join(__dirname, 'dev.sqlite3'),
-    },
+    client: 'postgresql',
+    connection: process.env.DATABASE_URL,
     pool: {
-      afterCreate: (conn, cb) => conn.run('PRAGMA foreign_keys = ON', cb),
+      min: 2,
+      max: 10,
+    },
+    migrations: {
+      tableName: 'knex_migrations',
     },
   },
-  // production: {
-  //   client: 'postgresql',
-  //   connection: process.env.DATABASE_URL,
-  //   pool: {
-  //     min: 2,
-  //     max: 10,
-  //   },
-  //   migrations: {
-  //     tableName: 'knex_migrations',
-  //   },
-  // },
 }

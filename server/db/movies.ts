@@ -1,29 +1,29 @@
 import connection from './connection'
 import * as models from '../../client/models/movies'
 
-export function getMovieById(
+export function getMovie(
   movieId: string,
   db = connection,
 ): Promise<models.MovieDetails[]> {
   return db('movies').select().where({ id: movieId })
 }
 
-export function getMovie(db = connection): Promise<models.MovieDetails[]> {
-  return db('movies').select()
-}
-
-export function addMovie(movieData: models.MovieDetails, db = connection) {
+export function addMovie(
+  movieId: string,
+  movieData: models.MovieDetails,
+  db = connection,
+) {
   return db('movies')
     .insert({
-      id: movieData.imdbID,
-      title: movieData.Title,
-      director: movieData.Director,
-      language: movieData.Language,
-      genre: movieData.Genre,
-      plot: movieData.Plot,
-      poster_url: movieData.Poster,
-      actors: movieData.Actors,
-      released_date: movieData.Released,
+      id: movieData.id,
+      title: movieData.title,
+      director: movieData.director,
+      language: movieData.language,
+      genre: movieData.genre,
+      plot: movieData.plot,
+      poster_url: movieData.poster_url,
+      actors: movieData.actors,
+      released_date: movieData.released_date,
     })
     .returning('id')
 }
