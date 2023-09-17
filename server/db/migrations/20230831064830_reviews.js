@@ -7,8 +7,9 @@ exports.up = function (knex) {
     table.increments('id')
     table.string('movie_id')
     table.string('user_id')
+    table.string('user_name')
     table.string('body')
-    table.timestamps('created_at')
+    table.timestamps(true, true)
   })
 }
 

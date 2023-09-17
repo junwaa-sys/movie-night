@@ -13,6 +13,7 @@ exports.up = function (knex) {
     table.string('poster_url')
     table.string('actors')
     table.string('released_date')
+    table.timestamps(true, true)
   })
 }
 

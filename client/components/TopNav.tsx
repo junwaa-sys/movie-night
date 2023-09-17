@@ -1,5 +1,5 @@
 import { useAuth0 } from '@auth0/auth0-react'
-import React from 'react'
+import { Link } from 'react-router-dom'
 
 function TopNav() {
   const { user, isLoading, loginWithRedirect, isAuthenticated, logout } =
@@ -12,7 +12,13 @@ function TopNav() {
   return (
     <div className="topnav">
       <div className="topnav-container">
-        <div>You are logged in as {user?.name}</div>
+        <div>user: {user?.name}</div>
+        <div>
+          <Link to="/movie-list">Movie in Local DB</Link>
+        </div>
+        <div>
+          <Link to="/movie">Random Movie</Link>
+        </div>
         {!isAuthenticated ? (
           <button className="button" onClick={() => loginWithRedirect()}>
             LOGIN

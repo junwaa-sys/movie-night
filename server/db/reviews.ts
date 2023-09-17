@@ -1,23 +1,22 @@
 import connection from './connection'
-import * as models from '../../client/models/reviews'
+import * as reviewModels from '../../client/models/reviews'
 
 export function getReviews(
   movieId: string,
   db = connection,
-): Promise<models.Reviews[]> {
+): Promise<reviewModels.Reviews[]> {
   return db('reviews').select().where({ id: movieId })
 }
 
 export function addReview(
-  movieId: string,
-  reviewDetail: models.Reviews,
+  reviewDetail: reviewModels.NewReview,
   db = connection,
 ) {
   return db('reviews')
     .insert({
-      movie_id: movieId,
+      movie_id: reviewDetail.movie_id,
       user_id: reviewDetail.user_id,
-      body: reviewDetail,
+      body: reviewDetail.body,
     })
     .returning('id')
 }

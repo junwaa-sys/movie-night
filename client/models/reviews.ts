@@ -1,3 +1,5 @@
+import Reviews from "../components/Reviews"
+
 export interface Reviews {
   id: number
   movie_id: string
@@ -5,3 +7,5 @@ export interface Reviews {
   body: string
   created_at: string
 }
+
+export type NewReview = Partial<Reviews>

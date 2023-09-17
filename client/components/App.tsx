@@ -1,14 +1,17 @@
-import { useEffect } from 'react'
-import { useAppDispatch, useAppSelector } from '../hooks'
+import { Routes, Route } from 'react-router-dom'
 import TopNav from './TopNav'
 import Main from './Main'
-import Reviews from './Reviews'
+import MoiveList from './MoiveList'
 
 function App() {
   return (
     <>
       <TopNav />
-      <Main />
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/movie" element={<Main />} />
+        <Route path="/movie-list" element={<MoiveList />} />
+      </Routes>
     </>
   )
 }
