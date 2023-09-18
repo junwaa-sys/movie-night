@@ -72,20 +72,24 @@ function MoiveList() {
             ></input>
           </div>
           <div className="movie-table">
-            <table>
-              <thead>
-                <tr>
-                  <td>ID</td>
-                  <td>TITLE</td>
-                  <td>DIRECTOR</td>
-                  <td>ACTORS</td>
-                  <td>GENRE</td>
-                  <td>LANGUAGE</td>
-                  <td>RELEASED DATE</td>
-                </tr>
-              </thead>
-              <tbody>{tableRow}</tbody>
-            </table>
+            {tableRow?.length == 0 ? (
+              <p>No Search Result!</p>
+            ) : (
+              <table>
+                <thead>
+                  <tr>
+                    <td>ID</td>
+                    <td>TITLE</td>
+                    <td>DIRECTOR</td>
+                    <td>ACTORS</td>
+                    <td>GENRE</td>
+                    <td>LANGUAGE</td>
+                    <td>RELEASED DATE</td>
+                  </tr>
+                </thead>
+                <tbody>{tableRow}</tbody>
+              </table>
+            )}
           </div>
         </div>
       </div>
