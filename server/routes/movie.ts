@@ -30,9 +30,7 @@ router.get('/get/random', (req, res) => {
 router.get('/get-details/:id', (req, res) => {
   const movieId = req.params.id
   request
-    .get(
-      `http://www.omdbapi.com/?apikey=${process.env.MOVIE_API_KEY}&i=${movieId}`,
-    )
+    .get(`http://www.omdbapi.com/?apikey=ff57665a&i=${movieId}`)
     .then((response) => {
       res.json(response.body)
     })
