@@ -11,7 +11,7 @@ const options = {
     list: 'most_pop_movies',
   },
   headers: {
-    'X-RapidAPI-Key': process.env.AXIOS_MOVIE_API_KEY,
+    'X-RapidAPI-Key': '00512bb4edmsh7f23271bc900586p161cb4jsna563d2315625',
     'X-RapidAPI-Host': 'moviesdatabase.p.rapidapi.com',
   },
 }
