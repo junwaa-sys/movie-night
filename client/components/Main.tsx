@@ -96,6 +96,7 @@ function Main() {
               <article>Plot: {movieDetails?.Plot}</article>
             </div>
           </div>
+          <hr></hr>
           <div className="review-container">
             <div className="review">{reviews_display}</div>
             <div className="review-input">

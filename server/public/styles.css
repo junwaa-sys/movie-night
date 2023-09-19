@@ -53,3 +53,21 @@ tr:hover{
   background-color: lightgray;
 }
 
+.main {
+  overflow: visible;
+  position: flex;  
+  justify-content: center;
+}
+
+.main-container {    
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: flex-start;
+}
+
+.main .main-container .poster  img{
+  justify-self: center;
+  width: 50vw;
+}
