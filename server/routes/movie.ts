@@ -8,6 +8,7 @@ const axios = require('axios')
 
 const options = {
   method: 'GET',
+  params: { list: 'top_rated_series_250' },
   url: 'https://moviesdatabase.p.rapidapi.com/titles/random',
   headers: {
     'X-RapidAPI-Key': process.env.AXIOS_MOVIE_API_KEY,
@@ -18,8 +19,7 @@ const options = {
 router.get('/get/random', async (req, res) => {
   try {
     const response = await axios.request(options)
-    console.log(response)
-    res.json(response.body)
+    res.json(response.data)
   } catch (error) {
     console.log(error)
   }

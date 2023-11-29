@@ -8,7 +8,7 @@ function App() {
     <>
       <TopNav />
       <Routes>
-        <Route path="/" element={<Main />} />
+        <Route path="/" element={<MoiveList />} />
         <Route path="/movie" element={<Main />} />
         <Route path="/movie-list" element={<MoiveList />} />
       </Routes>
