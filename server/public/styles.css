@@ -40,6 +40,7 @@ table {
   border-radius: 50%;
   border-collapse: collapse;
   text-align: center;
+  word-wrap: break-word;
 }
 
 th{  
