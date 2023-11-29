@@ -47,6 +47,7 @@ th{
   font-weight: bold;
   text-align: center;
   vertical-align: middle;
+  padding: 10px;
 }
 
 tr{
@@ -54,6 +55,11 @@ tr{
   cursor:grab;
   vertical-align: middle;
 }
+
+td {
+  padding: 10px;
+}
+
 tr:hover{
   background-color: lightgray;
 }
