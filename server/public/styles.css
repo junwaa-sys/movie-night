@@ -39,6 +39,7 @@ table {
   border: 2px solid black;
   border-radius: 50%;
   border-collapse: collapse;
+  text-align: center;
 }
 
 th{  
